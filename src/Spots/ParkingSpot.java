@@ -3,6 +3,12 @@ package Spots;
 import Vehicles.Vehicle;
 
 public abstract class ParkingSpot {
+    private boolean isOccupied;
+    private int spotNo;
+    private String spotType;
+    private Vehicle vehicle;
+
+
     public ParkingSpot(int spotNo, String spotType) {
         this.isOccupied = false;
         this.spotNo = spotNo;
@@ -33,15 +39,10 @@ public abstract class ParkingSpot {
         this.spotType = spotType;
     }
 
-    private Vehicle vehicle;
 
     public void setOccupied(boolean occupied) {
         isOccupied = occupied;
     }
-
-    private boolean isOccupied;
-    private int spotNo;
-    private String spotType;
 
     public boolean isOccupied(){
         return isOccupied;
